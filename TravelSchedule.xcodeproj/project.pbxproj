@@ -11,7 +11,33 @@
 		B512BB872D3C3C6C00AE9AB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BB862D3C3C6C00AE9AB7 /* ContentView.swift */; };
 		B512BB892D3C3C6D00AE9AB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B512BB882D3C3C6D00AE9AB7 /* Assets.xcassets */; };
 		B512BB8C2D3C3C6D00AE9AB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B512BB8B2D3C3C6D00AE9AB7 /* Preview Assets.xcassets */; };
+		B512BB942D3C3CDE00AE9AB7 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = B512BB932D3C3CDE00AE9AB7 /* OpenAPIURLSession */; };
+		B512BB972D3C3CE300AE9AB7 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = B512BB962D3C3CE300AE9AB7 /* OpenAPIRuntime */; };
+		B512BBA02D3C3D2500AE9AB7 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = B512BB9E2D3C3D2500AE9AB7 /* openapi.yaml */; };
+		B512BBA12D3C3D2500AE9AB7 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = B512BB9F2D3C3D2500AE9AB7 /* openapi-generator-config.yaml */; };
+		B512BBAA2D3C3D4600AE9AB7 /* TravelScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBA92D3C3D4600AE9AB7 /* TravelScheduleTests.swift */; };
+		B512BBBF2D3C3D9A00AE9AB7 /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBB62D3C3D9A00AE9AB7 /* CopyrightService.swift */; };
+		B512BBC02D3C3D9A00AE9AB7 /* ScheduleBetweenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBB72D3C3D9A00AE9AB7 /* ScheduleBetweenService.swift */; };
+		B512BBC12D3C3D9A00AE9AB7 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBB82D3C3D9A00AE9AB7 /* NearestSettlementService.swift */; };
+		B512BBC22D3C3D9A00AE9AB7 /* ScheduleForStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBB92D3C3D9A00AE9AB7 /* ScheduleForStation.swift */; };
+		B512BBC42D3C3D9A00AE9AB7 /* StationsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBBB2D3C3D9A00AE9AB7 /* StationsListService.swift */; };
+		B512BBC52D3C3D9A00AE9AB7 /* ThreadStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBBC2D3C3D9A00AE9AB7 /* ThreadStationsService.swift */; };
+		B512BBC62D3C3D9A00AE9AB7 /* NearestStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBBD2D3C3D9A00AE9AB7 /* NearestStationsService.swift */; };
+		B512BBC72D3C3D9A00AE9AB7 /* CarrierService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBBE2D3C3D9A00AE9AB7 /* CarrierService.swift */; };
+		B512BBCA2D3C3DE400AE9AB7 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBC92D3C3DE400AE9AB7 /* JSONDecoder+Extensions.swift */; };
+		B512BBCF2D3C3EF000AE9AB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBCE2D3C3EF000AE9AB7 /* Constants.swift */; };
+		B5D33E382D3C3FD000C82128 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D33E372D3C3FD000C82128 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B512BBAB2D3C3D4600AE9AB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B512BB792D3C3C6C00AE9AB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B512BB802D3C3C6C00AE9AB7;
+			remoteInfo = TravelSchedule;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B512BB812D3C3C6C00AE9AB7 /* TravelSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +45,34 @@
 		B512BB862D3C3C6C00AE9AB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B512BB882D3C3C6D00AE9AB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B512BB8B2D3C3C6D00AE9AB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B512BB9E2D3C3D2500AE9AB7 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = openapi.yaml; path = "../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/openapi/openapi.yaml"; sourceTree = "<group>"; };
+		B512BB9F2D3C3D2500AE9AB7 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = "openapi-generator-config.yaml"; path = "../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/openapi/openapi-generator-config.yaml"; sourceTree = "<group>"; };
+		B512BBA72D3C3D4600AE9AB7 /* TravelScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B512BBA92D3C3D4600AE9AB7 /* TravelScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelScheduleTests.swift; sourceTree = "<group>"; };
+		B512BBB62D3C3D9A00AE9AB7 /* CopyrightService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CopyrightService.swift; path = "../../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/CopyrightService.swift"; sourceTree = "<group>"; };
+		B512BBB72D3C3D9A00AE9AB7 /* ScheduleBetweenService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleBetweenService.swift; path = "../../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/ScheduleBetweenService.swift"; sourceTree = "<group>"; };
+		B512BBB82D3C3D9A00AE9AB7 /* NearestSettlementService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NearestSettlementService.swift; path = "../../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/NearestSettlementService.swift"; sourceTree = "<group>"; };
+		B512BBB92D3C3D9A00AE9AB7 /* ScheduleForStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleForStation.swift; path = "../../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/ScheduleForStation.swift"; sourceTree = "<group>"; };
+		B512BBBB2D3C3D9A00AE9AB7 /* StationsListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationsListService.swift; path = "../../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/StationsListService.swift"; sourceTree = "<group>"; };
+		B512BBBC2D3C3D9A00AE9AB7 /* ThreadStationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadStationsService.swift; path = "../../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/ThreadStationsService.swift"; sourceTree = "<group>"; };
+		B512BBBD2D3C3D9A00AE9AB7 /* NearestStationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NearestStationsService.swift; path = "../../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/NearestStationsService.swift"; sourceTree = "<group>"; };
+		B512BBBE2D3C3D9A00AE9AB7 /* CarrierService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarrierService.swift; path = "../../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/CarrierService.swift"; sourceTree = "<group>"; };
+		B512BBC92D3C3DE400AE9AB7 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONDecoder+Extensions.swift"; path = "../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/Helpers/JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
+		B512BBCE2D3C3EF000AE9AB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B5D33E372D3C3FD000C82128 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/NetworkManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B512BB7E2D3C3C6C00AE9AB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B512BB972D3C3CE300AE9AB7 /* OpenAPIRuntime in Frameworks */,
+				B512BB942D3C3CDE00AE9AB7 /* OpenAPIURLSession in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B512BBA42D3C3D4600AE9AB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				B512BB832D3C3C6C00AE9AB7 /* TravelSchedule */,
+				B512BBA82D3C3D4600AE9AB7 /* TravelScheduleTests */,
 				B512BB822D3C3C6C00AE9AB7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				B512BB812D3C3C6C00AE9AB7 /* TravelSchedule.app */,
+				B512BBA72D3C3D4600AE9AB7 /* TravelScheduleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,8 +103,14 @@
 		B512BB832D3C3C6C00AE9AB7 /* TravelSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				B512BBB42D3C3D7400AE9AB7 /* Models */,
+				B512BBB32D3C3D6E00AE9AB7 /* Views */,
+				B512BBB22D3C3D6600AE9AB7 /* ViewModels */,
+				B512BBB12D3C3D5900AE9AB7 /* Services */,
+				B512BBB02D3C3D5300AE9AB7 /* Helpers */,
 				B512BB842D3C3C6C00AE9AB7 /* TravelScheduleApp.swift */,
 				B512BB862D3C3C6C00AE9AB7 /* ContentView.swift */,
+				B512BB9D2D3C3D0700AE9AB7 /* openAPI */,
 				B512BB882D3C3C6D00AE9AB7 /* Assets.xcassets */,
 				B512BB8A2D3C3C6D00AE9AB7 /* Preview Content */,
 			);
@@ -65,6 +123,77 @@
 				B512BB8B2D3C3C6D00AE9AB7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B512BB9D2D3C3D0700AE9AB7 /* openAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B512BB9F2D3C3D2500AE9AB7 /* openapi-generator-config.yaml */,
+				B512BB9E2D3C3D2500AE9AB7 /* openapi.yaml */,
+			);
+			path = openAPI;
+			sourceTree = "<group>";
+		};
+		B512BBA82D3C3D4600AE9AB7 /* TravelScheduleTests */ = {
+			isa = PBXGroup;
+			children = (
+				B512BBA92D3C3D4600AE9AB7 /* TravelScheduleTests.swift */,
+			);
+			path = TravelScheduleTests;
+			sourceTree = "<group>";
+		};
+		B512BBB02D3C3D5300AE9AB7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B512BBC92D3C3DE400AE9AB7 /* JSONDecoder+Extensions.swift */,
+				B512BBCE2D3C3EF000AE9AB7 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B512BBB12D3C3D5900AE9AB7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B5D33E372D3C3FD000C82128 /* NetworkManager.swift */,
+				B512BBB52D3C3D7F00AE9AB7 /* NetworkServices */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B512BBB22D3C3D6600AE9AB7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B512BBB32D3C3D6E00AE9AB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B512BBB42D3C3D7400AE9AB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B512BBB52D3C3D7F00AE9AB7 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				B512BBBD2D3C3D9A00AE9AB7 /* NearestStationsService.swift */,
+				B512BBBE2D3C3D9A00AE9AB7 /* CarrierService.swift */,
+				B512BBB62D3C3D9A00AE9AB7 /* CopyrightService.swift */,
+				B512BBB82D3C3D9A00AE9AB7 /* NearestSettlementService.swift */,
+				B512BBB72D3C3D9A00AE9AB7 /* ScheduleBetweenService.swift */,
+				B512BBB92D3C3D9A00AE9AB7 /* ScheduleForStation.swift */,
+				B512BBBB2D3C3D9A00AE9AB7 /* StationsListService.swift */,
+				B512BBBC2D3C3D9A00AE9AB7 /* ThreadStationsService.swift */,
+			);
+			path = NetworkServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,11 +210,34 @@
 			buildRules = (
 			);
 			dependencies = (
+				B512BB9C2D3C3D0000AE9AB7 /* PBXTargetDependency */,
 			);
 			name = TravelSchedule;
+			packageProductDependencies = (
+				B512BB932D3C3CDE00AE9AB7 /* OpenAPIURLSession */,
+				B512BB962D3C3CE300AE9AB7 /* OpenAPIRuntime */,
+			);
 			productName = TravelSchedule;
 			productReference = B512BB812D3C3C6C00AE9AB7 /* TravelSchedule.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B512BBA62D3C3D4600AE9AB7 /* TravelScheduleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B512BBAD2D3C3D4600AE9AB7 /* Build configuration list for PBXNativeTarget "TravelScheduleTests" */;
+			buildPhases = (
+				B512BBA32D3C3D4600AE9AB7 /* Sources */,
+				B512BBA42D3C3D4600AE9AB7 /* Frameworks */,
+				B512BBA52D3C3D4600AE9AB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B512BBAC2D3C3D4600AE9AB7 /* PBXTargetDependency */,
+			);
+			name = TravelScheduleTests;
+			productName = TravelScheduleTests;
+			productReference = B512BBA72D3C3D4600AE9AB7 /* TravelScheduleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +252,10 @@
 					B512BB802D3C3C6C00AE9AB7 = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					B512BBA62D3C3D4600AE9AB7 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = B512BB802D3C3C6C00AE9AB7;
+					};
 				};
 			};
 			buildConfigurationList = B512BB7C2D3C3C6C00AE9AB7 /* Build configuration list for PBXProject "TravelSchedule" */;
@@ -111,11 +267,17 @@
 				Base,
 			);
 			mainGroup = B512BB782D3C3C6C00AE9AB7;
+			packageReferences = (
+				B512BB922D3C3CDE00AE9AB7 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+				B512BB952D3C3CE300AE9AB7 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
+				B512BB982D3C3CE900AE9AB7 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
+			);
 			productRefGroup = B512BB822D3C3C6C00AE9AB7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B512BB802D3C3C6C00AE9AB7 /* TravelSchedule */,
+				B512BBA62D3C3D4600AE9AB7 /* TravelScheduleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +288,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B512BB8C2D3C3C6D00AE9AB7 /* Preview Assets.xcassets in Resources */,
+				B512BBA12D3C3D2500AE9AB7 /* openapi-generator-config.yaml in Resources */,
 				B512BB892D3C3C6D00AE9AB7 /* Assets.xcassets in Resources */,
+				B512BBA02D3C3D2500AE9AB7 /* openapi.yaml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B512BBA52D3C3D4600AE9AB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,11 +309,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				B512BB872D3C3C6C00AE9AB7 /* ContentView.swift in Sources */,
+				B512BBC22D3C3D9A00AE9AB7 /* ScheduleForStation.swift in Sources */,
+				B512BBC12D3C3D9A00AE9AB7 /* NearestSettlementService.swift in Sources */,
+				B5D33E382D3C3FD000C82128 /* NetworkManager.swift in Sources */,
+				B512BBC52D3C3D9A00AE9AB7 /* ThreadStationsService.swift in Sources */,
+				B512BBC72D3C3D9A00AE9AB7 /* CarrierService.swift in Sources */,
 				B512BB852D3C3C6C00AE9AB7 /* TravelScheduleApp.swift in Sources */,
+				B512BBCF2D3C3EF000AE9AB7 /* Constants.swift in Sources */,
+				B512BBBF2D3C3D9A00AE9AB7 /* CopyrightService.swift in Sources */,
+				B512BBCA2D3C3DE400AE9AB7 /* JSONDecoder+Extensions.swift in Sources */,
+				B512BBC42D3C3D9A00AE9AB7 /* StationsListService.swift in Sources */,
+				B512BBC02D3C3D9A00AE9AB7 /* ScheduleBetweenService.swift in Sources */,
+				B512BBC62D3C3D9A00AE9AB7 /* NearestStationsService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B512BBA32D3C3D4600AE9AB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B512BBAA2D3C3D4600AE9AB7 /* TravelScheduleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B512BB9C2D3C3D0000AE9AB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B512BB9B2D3C3D0000AE9AB7 /* OpenAPIGenerator */;
+		};
+		B512BBAC2D3C3D4600AE9AB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B512BB802D3C3C6C00AE9AB7 /* TravelSchedule */;
+			targetProxy = B512BBAB2D3C3D4600AE9AB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B512BB8D2D3C3C6D00AE9AB7 /* Debug */ = {
@@ -278,8 +480,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +490,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nigga.TravelSchedule.TravelSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,8 +514,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +524,49 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nigga.TravelSchedule.TravelSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B512BBAE2D3C3D4600AE9AB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MP4RYSJJ7N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nigga.TravelSchedule.TravelScheduleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TravelSchedule.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TravelSchedule";
+			};
+			name = Debug;
+		};
+		B512BBAF2D3C3D4600AE9AB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MP4RYSJJ7N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nigga.TravelSchedule.TravelScheduleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TravelSchedule.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TravelSchedule";
 			};
 			name = Release;
 		};
@@ -343,7 +591,61 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B512BBAD2D3C3D4600AE9AB7 /* Build configuration list for PBXNativeTarget "TravelScheduleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B512BBAE2D3C3D4600AE9AB7 /* Debug */,
+				B512BBAF2D3C3D4600AE9AB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B512BB922D3C3CDE00AE9AB7 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-urlsession";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		B512BB952D3C3CE300AE9AB7 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-runtime";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.0;
+			};
+		};
+		B512BB982D3C3CE900AE9AB7 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B512BB932D3C3CDE00AE9AB7 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B512BB922D3C3CDE00AE9AB7 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
+		};
+		B512BB962D3C3CE300AE9AB7 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B512BB952D3C3CE300AE9AB7 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		B512BB9B2D3C3D0000AE9AB7 /* OpenAPIGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B512BB982D3C3CE900AE9AB7 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
+			productName = "plugin:OpenAPIGenerator";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B512BB792D3C3C6C00AE9AB7 /* Project object */;
 }
