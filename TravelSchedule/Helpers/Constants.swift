@@ -9,6 +9,6 @@ import Foundation
 
 
 enum Constants {
-    static let yandexScheduleAPIKey = "3f6b4313-75b5-405a-ab82-62c77836ed1d"
-    static let agreementURLString = "https://yandex.ru/legal/practicum_offer/"
+    static let raspApiKey = "3f6b4313-75b5-405a-ab82-62c77836ed1d"
+    static let practicumURL = "https://yandex.ru/legal/practicum_offer/"
 }
