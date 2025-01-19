@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Binding var isDarkMode: Bool
+    @State private var selectedTab: Int = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            VStack {
+                ScheduleView()
+            }
+            .tabItem {
+                Image(.scheduleTab)
+            }
+            .tag(0)
+            VStack {
+                SettingsView(isDarkMode: $isDarkMode)
+            }
+            .tabItem {
+                Image(.settingsTab)
+            }
+            .tag(1)
         }
-        .padding()
+        .tint(Color.black)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(isDarkMode: .constant(false))
 }
