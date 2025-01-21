@@ -13,7 +13,6 @@ struct UserAgreementView: View {
             .toolbar(.hidden, for: .tabBar)
             .toolbarRole(.editor)
             .navigationTitle("Пользовательское соглашение")
-            .background(Color.white)
     }
 }
 

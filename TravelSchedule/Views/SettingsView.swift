@@ -17,8 +17,8 @@ struct SettingsView: View {
                     .toggleStyle(SwitchToggleStyle(tint: Color.blue))
                 NavigationLink(destination: UserAgreementView()) {
                     ListRowView(text: "Пользовательское соглашение")
-                        .tint(Color.black)
                 }
+                .foregroundStyle(.foreground)
             }
             .padding(.top, 24)
             .padding(.horizontal)

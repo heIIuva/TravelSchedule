@@ -11,7 +11,7 @@ import OpenAPIURLSession
 
 final class TrainsScheduleTests: XCTestCase {
 
-    let networkManager = NetworkManager()
+    let networkManager = NetworkManager.shared
     
     // ручка /v3.0/search/
     func testSchedulesBetweenStations() async {

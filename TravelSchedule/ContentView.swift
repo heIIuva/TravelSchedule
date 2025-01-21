@@ -12,23 +12,25 @@ struct ContentView: View {
     @State private var selectedTab: Int = 0
     
     var body: some View {
-        TabView {
-            VStack {
-                ScheduleView()
+        RouterView {
+            TabView {
+                VStack {
+                    ScheduleView()
+                }
+                .tabItem {
+                    Image(.scheduleTab)
+                }
+                .tag(0)
+                VStack {
+                    SettingsView(isDarkMode: $isDarkMode)
+                }
+                .tabItem {
+                    Image(.settingsTab)
+                }
+                .tag(1)
             }
-            .tabItem {
-                Image(.scheduleTab)
-            }
-            .tag(0)
-            VStack {
-                SettingsView(isDarkMode: $isDarkMode)
-            }
-            .tabItem {
-                Image(.settingsTab)
-            }
-            .tag(1)
+            .tint(.tabAccent)
         }
-        .tint(Color.black)
     }
 }
 
