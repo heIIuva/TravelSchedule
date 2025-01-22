@@ -12,8 +12,8 @@ final class SearchMachine: ObservableObject {
     
     @Published var departureCity = ""
     @Published var destinationCity = ""
-    @Published var departureStations = ""
-    @Published var destinationStations = ""
+    @Published var departureStation: Station = Station(title: "", code: "")
+    @Published var destinationStation: Station = Station(title: "", code: "")
     @Published var departureText = ""
     @Published var destinationText = ""
     
@@ -21,11 +21,23 @@ final class SearchMachine: ObservableObject {
         (departureText, destinationText) = (destinationText, departureText)
     }
     
-    func departure() {
-        departureText = "\(departureCity) \(departureStations)"
+    func city(for direction: Directions, _ city: String) {
+        switch direction {
+        case .departure:
+            departureCity = city
+        case .destination:
+            destinationCity = city
+        }
     }
     
-    func destination() {
-        destinationText = "\(destinationCity) \(destinationStations)"
+    func text(for direction: Directions, _ station: Station) {
+        switch direction {
+        case .departure:
+            departureStation = station
+            departureText = "\(departureCity) (\(departureStation.title))"
+        case .destination:
+            destinationStation = station
+            destinationText = "\(destinationCity) (\(destinationStation.title))"
+        }
     }
 }

@@ -15,12 +15,12 @@ final class Router: ObservableObject {
     @ViewBuilder
     func view(for route: Route) -> some View {
         switch route {
-        case .goToScheduleView:
-            ScheduleView()
-        case .goToCityListView:
-            EmptyView()
+        case let .goToCityListView(direction):
+            CitiesListView(viewModel: CitiesViewModel(), direction: direction)
+        case let .goToStationsListView(stations, direction):
+            StationsListView(stations: stations, direction: direction)
         case .goToCarrierListView:
-            EmptyView()
+            CarrierListView(viewModel: ScheduleViewModel())
         case .goToFiltersView:
             EmptyView()
         case .goToCarrierInfoView:

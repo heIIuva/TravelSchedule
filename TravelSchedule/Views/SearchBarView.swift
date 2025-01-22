@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchBarView: View {
     
     @Binding var searchText: String
-    @State var isSearching: Bool = false
+    @State private var isSearching: Bool = false
     var placeholder = "Введите запрос"
      
     var body: some View {
@@ -62,11 +62,7 @@ struct SearchBarView: View {
                     
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     
-                }, label: {
-                    Text("Отмена")
-                        .foregroundColor(.blue)
-                        .padding(.leading, 14)
-                })
+                }, label: { Text("") })
             }
         }
         .frame(height: 37)

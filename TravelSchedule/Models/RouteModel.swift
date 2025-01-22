@@ -9,8 +9,8 @@ import Foundation
 
 
 enum Route: Hashable {
-    case goToScheduleView
-    case goToCityListView
+    case goToCityListView(Directions)
+    case goToStationsListView([Station], Directions)
     case goToCarrierListView
     case goToFiltersView
     case goToCarrierInfoView

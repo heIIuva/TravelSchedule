@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var searchMachine = SearchMachine()
+    @StateObject private var viewModel = CitiesViewModel()
+    
     @Binding var isDarkMode: Bool
     @State private var selectedTab: Int = 0
-    
+        
     var body: some View {
         RouterView {
             TabView {
                 VStack {
-                    ScheduleView()
+                    ScheduleView(viewModel: viewModel)
                 }
                 .tabItem {
                     Image(.scheduleTab)
@@ -31,6 +35,7 @@ struct ContentView: View {
             }
             .tint(.tabAccent)
         }
+        .environmentObject(searchMachine)
     }
 }
 

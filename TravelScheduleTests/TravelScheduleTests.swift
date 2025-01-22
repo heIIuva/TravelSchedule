@@ -17,7 +17,7 @@ final class TrainsScheduleTests: XCTestCase {
     func testSchedulesBetweenStations() async {
        let expectation = expectation(description: "testSchedulesBetween")
        do {
-           let result = try await networkManager.scheduleBetween(from: "c146", to: "c213")
+           let result = try await networkManager.scheduleBetween(from: "c146", to: "c213", hasTransfers: true)
            XCTAssertNotNil(result)
            expectation.fulfill()
        } catch {

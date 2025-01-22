@@ -1,11 +1,12 @@
 //
-//  UINavigationController+Extensions.swift
+//  UINavigationController.swift
 //  TravelSchedule
 //
-//  Created by big stepper on 20.01.2025.
+//  Created by big stepper on 22.01.2025.
 //
 
 import UIKit
+
 
 extension UINavigationController {
     override open func viewDidLoad() {

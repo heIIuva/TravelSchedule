@@ -11,22 +11,26 @@ import OpenAPIURLSession
 @MainActor
 final class CitiesViewModel: ObservableObject {
     
+    private let networkManager = NetworkManager.shared
+    
     @Published var searchText: String = ""
     @Published var cities: [City] = []
     @Published var stateMachine = LoadingStateMachine()
+    
+    func filteredCities() -> [City] {
+        searchText.isEmpty ? cities : cities.filter { $0.title.lowercased().contains(searchText.lowercased())}
+    }
     
     func getCities() async {
         cities.removeAll()
         stateMachine.state = .loading
         do {
-            let stations = try await NetworkManager.shared.stationsList()
+            let stations = try await networkManager.stationsList()
             stations.countries?
                 .filter { $0.title == "Россия" }
-                .flatMap { $0.regions ?? [] }
-                .forEach { getSettlements(in: $0) }
+                .forEach { country in country.regions?.forEach { region in getSettlements(in: region) }}
             cities.sort { $0.title < $1.title }
             stateMachine.state = .loaded
-            print(cities)
         } catch {
             stateMachine.state = .error(.connectionLost)
         }
