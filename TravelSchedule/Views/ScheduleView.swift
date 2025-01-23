@@ -12,7 +12,8 @@ struct ScheduleView: View {
     
     @EnvironmentObject var router: Router
     @EnvironmentObject var searchMachine: SearchMachine
-    @ObservedObject var viewModel: CitiesViewModel
+    @EnvironmentObject var citiesViewModel: CitiesViewModel
+    @EnvironmentObject var scheduleViewModel: ScheduleViewModel
         
     var body: some View {
         VStack(spacing: 16) {
@@ -20,7 +21,7 @@ struct ScheduleView: View {
                 VStack {
                     TextField(text: $searchMachine.departureText, label: {
                         Text("Откуда")
-                            .foregroundColor(Color.lightGray)
+                            .foregroundColor(Color.ypLightGray)
                     })
                     .foregroundColor(Color.black)
                     .font(.system(size: 17))
@@ -31,7 +32,7 @@ struct ScheduleView: View {
                     })
                     TextField(text: $searchMachine.destinationText, label: {
                         Text("Куда")
-                            .foregroundColor(Color.lightGray)
+                            .foregroundColor(Color.ypLightGray)
                     })
                     .foregroundColor(Color.black)
                     .font(.system(size: 17))
@@ -43,20 +44,34 @@ struct ScheduleView: View {
                 }
                 .background(Color.white.cornerRadius(20))
                 .padding(.all, 16)
-                Button(action: searchMachine.swapDirections) {
+                Button(action: {
+                        searchMachine.swapDirections()
+                        Task {
+                            await scheduleViewModel.getScheduleBetweenStations(from: searchMachine.departureStation.code, to: searchMachine.destinationStation.code, hasTransfers: true)
+                        }
+                    }
+                ) {
                     Image("swapDirections")
                         .tint(Color.blue)
                         .frame(width: 36, height: 36)
                         .background(Circle().fill(Color.white))
-                        .padding(.trailing, 16)
+                        
                 }
+                .padding(.trailing, 16)
             }
             .background(Color.blue.cornerRadius(20))
             .padding(.horizontal, 16)
             .padding(.top, 208)
             if !searchMachine.departureText.isEmpty && !searchMachine.destinationText.isEmpty {
                 Button(
-                    action: { router.push(.goToCarrierListView) },
+                    action: { 
+                        router.push(.goToCarrierListView)
+                        Task {
+                            if scheduleViewModel.paths.isEmpty {
+                                await scheduleViewModel.getScheduleBetweenStations(from: searchMachine.departureStation.code, to: searchMachine.destinationStation.code, hasTransfers: true)
+                            }
+                        }
+                    },
                     label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 16)
@@ -76,5 +91,5 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView(viewModel: CitiesViewModel())
+    ScheduleView()
 }

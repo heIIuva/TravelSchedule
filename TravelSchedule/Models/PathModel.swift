@@ -17,4 +17,5 @@ struct Path: Identifiable, Hashable {
     let hasTransfers: Bool
     let shortTitle: String
     let carrierLogo: String
+    let duration: String
 }

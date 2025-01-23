@@ -11,7 +11,8 @@ struct CitiesListView: View {
     
     @EnvironmentObject var router: Router
     @EnvironmentObject var searchMachine: SearchMachine
-    @ObservedObject var viewModel: CitiesViewModel
+    @EnvironmentObject var viewModel: CitiesViewModel
+    
     
     let direction: Directions
     
@@ -65,12 +66,14 @@ struct CitiesListView: View {
             viewModel.searchText = ""
         }
         .task {
-            await viewModel.getCities()
+            if viewModel.cities.isEmpty {
+                await viewModel.getCities()
+            }
         }
     }
 }
 
 #Preview {
-    CitiesListView(viewModel: CitiesViewModel(), direction: .departure)
+    CitiesListView(direction: .departure)
 }
 

@@ -19,6 +19,7 @@ final class SearchMachine: ObservableObject {
     
     func swapDirections() {
         (departureText, destinationText) = (destinationText, departureText)
+        (departureStation, destinationStation) = (destinationStation, departureStation)
     }
     
     func city(for direction: Directions, _ city: String) {

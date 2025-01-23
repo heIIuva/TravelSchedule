@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var searchMachine = SearchMachine()
-    @StateObject private var viewModel = CitiesViewModel()
+    @StateObject private var citiesViewModel = CitiesViewModel()
+    @StateObject private var scheduleViewModel = ScheduleViewModel()
     
     @Binding var isDarkMode: Bool
     @State private var selectedTab: Int = 0
@@ -19,7 +20,7 @@ struct ContentView: View {
         RouterView {
             TabView {
                 VStack {
-                    ScheduleView(viewModel: viewModel)
+                    ScheduleView()
                 }
                 .tabItem {
                     Image(.scheduleTab)
@@ -36,6 +37,8 @@ struct ContentView: View {
             .tint(.tabAccent)
         }
         .environmentObject(searchMachine)
+        .environmentObject(citiesViewModel)
+        .environmentObject(scheduleViewModel)
     }
 }
 

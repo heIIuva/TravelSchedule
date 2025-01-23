@@ -13,9 +13,4 @@ extension DateFormatter {
         let formatter = DateFormatter()
         return formatter
     }()
-    
-    static let iso8601DateFormatter: ISO8601DateFormatter = {
-        let formatter = ISO8601DateFormatter()
-        return formatter
-    }()
 }

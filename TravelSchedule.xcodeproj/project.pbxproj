@@ -53,7 +53,8 @@
 		B5E5F7162D417D6600A873ED /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F7152D417D6600A873ED /* ScheduleViewModel.swift */; };
 		B5E5F7192D41950300A873ED /* CarrierInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F7182D41950300A873ED /* CarrierInfoModel.swift */; };
 		B5E5F71B2D41A9E400A873ED /* CarrierListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F71A2D41A9E400A873ED /* CarrierListView.swift */; };
-		B5E5F71E2D41A9F400A873ED /* CarrierListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F71D2D41A9F400A873ED /* CarrierListRow.swift */; };
+		B5E5F7222D41B04000A873ED /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F7212D41B04000A873ED /* LogoView.swift */; };
+		B5E5F72C2D41BC2400A873ED /* CarrierListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F72B2D41BC2400A873ED /* CarrierListRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		B512BBBE2D3C3D9A00AE9AB7 /* CarrierService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarrierService.swift; path = "../../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/CarrierService.swift"; sourceTree = "<group>"; };
 		B512BBC92D3C3DE400AE9AB7 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONDecoder+Extensions.swift"; path = "../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/Helpers/JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		B512BBCE2D3C3EF000AE9AB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B556AC222D428DDB004F51EF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		B5D33E372D3C3FD000C82128 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/NetworkManager.swift"; sourceTree = "<group>"; };
 		B5E5F6CC2D3D643C00A873ED /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		B5E5F6CF2D3D7BD000A873ED /* UserAgreementWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementWebView.swift; sourceTree = "<group>"; };
@@ -113,7 +115,8 @@
 		B5E5F7152D417D6600A873ED /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		B5E5F7182D41950300A873ED /* CarrierInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierInfoModel.swift; sourceTree = "<group>"; };
 		B5E5F71A2D41A9E400A873ED /* CarrierListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierListView.swift; sourceTree = "<group>"; };
-		B5E5F71D2D41A9F400A873ED /* CarrierListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierListRow.swift; sourceTree = "<group>"; };
+		B5E5F7212D41B04000A873ED /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		B5E5F72B2D41BC2400A873ED /* CarrierListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierListRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,11 +242,12 @@
 				B5E5F6D82D3D7FF000A873ED /* SettingsView.swift */,
 				B5E5F6DC2D3D829F00A873ED /* ScheduleView.swift */,
 				B5E5F6DE2D3D82BC00A873ED /* SearchBarView.swift */,
-				B5E5F6F62D3ED13F00A873ED /* RouterView.swift */,
 				B5E5F7042D4053C100A873ED /* CitiesListView.swift */,
 				B5E5F7092D40805100A873ED /* StationsListView.swift */,
 				B5E5F71A2D41A9E400A873ED /* CarrierListView.swift */,
-				B5E5F71D2D41A9F400A873ED /* CarrierListRow.swift */,
+				B5E5F72B2D41BC2400A873ED /* CarrierListRowView.swift */,
+				B5E5F7212D41B04000A873ED /* LogoView.swift */,
+				B5E5F6F62D3ED13F00A873ED /* RouterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,11 +353,11 @@
 			};
 			buildConfigurationList = B512BB7C2D3C3C6C00AE9AB7 /* Build configuration list for PBXProject "TravelSchedule" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
 			);
 			mainGroup = B512BB782D3C3C6C00AE9AB7;
 			packageReferences = (
@@ -403,6 +407,7 @@
 				B512BB872D3C3C6C00AE9AB7 /* ContentView.swift in Sources */,
 				B5E5F7002D3F21B900A873ED /* DirectionsModel.swift in Sources */,
 				B512BBC22D3C3D9A00AE9AB7 /* ScheduleForStation.swift in Sources */,
+				B5E5F7222D41B04000A873ED /* LogoView.swift in Sources */,
 				B512BBC12D3C3D9A00AE9AB7 /* NearestSettlementService.swift in Sources */,
 				B5E5F6E52D3DAC7E00A873ED /* ErrorModel.swift in Sources */,
 				B5E5F7052D4053C100A873ED /* CitiesListView.swift in Sources */,
@@ -413,9 +418,9 @@
 				B5E5F6E82D3DAC9C00A873ED /* StationModel.swift in Sources */,
 				B5E5F70A2D40805100A873ED /* StationsListView.swift in Sources */,
 				B5E5F6D32D3D7D6F00A873ED /* UserAgreementView.swift in Sources */,
-				B5E5F71E2D41A9F400A873ED /* CarrierListRow.swift in Sources */,
 				B512BBC52D3C3D9A00AE9AB7 /* ThreadStationsService.swift in Sources */,
 				B512BBC72D3C3D9A00AE9AB7 /* CarrierService.swift in Sources */,
+				B5E5F72C2D41BC2400A873ED /* CarrierListRowView.swift in Sources */,
 				B512BB852D3C3C6C00AE9AB7 /* TravelScheduleApp.swift in Sources */,
 				B5E5F6F22D3ECE5100A873ED /* RouteModel.swift in Sources */,
 				B5E5F6E22D3DABF700A873ED /* CitiesViewModel.swift in Sources */,
@@ -467,6 +472,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B5E5F70D2D41716900A873ED /* en */,
+				B556AC222D428DDB004F51EF /* ru */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -542,6 +549,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

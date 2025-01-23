@@ -11,6 +11,7 @@ struct StationsListView: View {
     
     @EnvironmentObject var router: Router
     @EnvironmentObject var searchMachine: SearchMachine
+    @EnvironmentObject var viewModel: CitiesViewModel
     
     @State private var searchText: String = ""
     

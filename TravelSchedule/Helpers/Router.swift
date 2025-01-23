@@ -16,11 +16,11 @@ final class Router: ObservableObject {
     func view(for route: Route) -> some View {
         switch route {
         case let .goToCityListView(direction):
-            CitiesListView(viewModel: CitiesViewModel(), direction: direction)
+            CitiesListView(direction: direction)
         case let .goToStationsListView(stations, direction):
             StationsListView(stations: stations, direction: direction)
         case .goToCarrierListView:
-            CarrierListView(viewModel: ScheduleViewModel())
+            CarrierListView()
         case .goToFiltersView:
             EmptyView()
         case .goToCarrierInfoView:
@@ -31,19 +31,25 @@ final class Router: ObservableObject {
     @inlinable
     @inline(__always)
     func push(_ appRoute: Route) {
-        path.append(appRoute)
+        DispatchQueue.main.async {
+            self.path.append(appRoute)
+        }
     }
     
     @inlinable
     @inline(__always)
     func pop() {
-        guard !path.isEmpty else { return }
-        path.removeLast()
+        DispatchQueue.main.async {
+            guard !self.path.isEmpty else { return }
+            self.path.removeLast()
+        }
     }
     
     @inlinable
     @inline(__always)
     func popToRoot() {
-        path.removeLast(path.count)
+        DispatchQueue.main.async {
+            self.path.removeLast(self.path.count)
+        }
     }
 }
