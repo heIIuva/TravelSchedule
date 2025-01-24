@@ -22,9 +22,9 @@ final class Router: ObservableObject {
         case .goToCarrierListView:
             CarrierListView()
         case .goToFiltersView:
-            EmptyView()
-        case .goToCarrierInfoView:
-            EmptyView()
+            FiltersView()
+        case let .goToCarrierInfoView(carrier):
+            CarrierInfoView(carrier: carrier)
         }
     }
     

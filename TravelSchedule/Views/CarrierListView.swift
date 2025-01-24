@@ -32,12 +32,12 @@ struct CarrierListView: View {
                 Spacer()
             case .loaded:
                 Spacer()
-                if viewModel.paths.isEmpty {
+                if viewModel.filteredPaths.isEmpty {
                     Text("Вариантов нет")
                         .font(.system(size: 24, weight: .bold))
                     Spacer()
                 } else {
-                    List(viewModel.paths) { path in
+                    List(viewModel.filteredPaths) { path in
                         CarrierListRowView(path: path)
                             .padding(.horizontal)
                             .listRowSeparator(.hidden)
@@ -45,6 +45,9 @@ struct CarrierListView: View {
                                                  leading: 0,
                                                  bottom: 8,
                                                  trailing: 0))
+                            .onTapGesture {
+                                router.push(.goToCarrierInfoView(path.carrier))
+                            }
                     }
                     .listStyle(.inset)
                 }
@@ -55,11 +58,16 @@ struct CarrierListView: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 16)
                             .frame(width: 343, height: 60)
-                            .foregroundColor(Color.blue)
+                            .foregroundColor(Color.ypBlue)
                         HStack {
-                            Text("Найти")
+                            Text("Уточнить время")
                                 .font(.system(size: 17, weight: .bold))
                                 .foregroundColor(Color.white)
+                            if viewModel.isFiltered {
+                                Circle()
+                                    .tint(Color.ypRed)
+                                    .frame(width: 8, height: 8)
+                            }
                         }
                         .frame(alignment: .center)
                     }

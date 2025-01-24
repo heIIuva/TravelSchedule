@@ -20,6 +20,9 @@ struct LogoView: View {
             case .success(let image):
                 image
                     .resizable()
+            case .empty:
+                Image(systemName: "photo")
+                    .font(.largeTitle)
             default:
                 ProgressView()
             }

@@ -21,7 +21,7 @@ struct ScheduleView: View {
                 VStack {
                     TextField(text: $searchMachine.departureText, label: {
                         Text("Откуда")
-                            .foregroundColor(Color.ypLightGray)
+                            .foregroundColor(Color.ypGray)
                     })
                     .foregroundColor(Color.black)
                     .font(.system(size: 17))
@@ -32,7 +32,7 @@ struct ScheduleView: View {
                     })
                     TextField(text: $searchMachine.destinationText, label: {
                         Text("Куда")
-                            .foregroundColor(Color.ypLightGray)
+                            .foregroundColor(Color.ypGray)
                     })
                     .foregroundColor(Color.black)
                     .font(.system(size: 17))
@@ -52,14 +52,14 @@ struct ScheduleView: View {
                     }
                 ) {
                     Image("swapDirections")
-                        .tint(Color.blue)
+                        .tint(Color.ypBlue)
                         .frame(width: 36, height: 36)
                         .background(Circle().fill(Color.white))
                         
                 }
                 .padding(.trailing, 16)
             }
-            .background(Color.blue.cornerRadius(20))
+            .background(Color.ypBlue.cornerRadius(20))
             .padding(.horizontal, 16)
             .padding(.top, 208)
             if !searchMachine.departureText.isEmpty && !searchMachine.destinationText.isEmpty {
@@ -67,7 +67,7 @@ struct ScheduleView: View {
                     action: { 
                         router.push(.goToCarrierListView)
                         Task {
-                            if scheduleViewModel.paths.isEmpty {
+                            if scheduleViewModel.filteredPaths.isEmpty {
                                 await scheduleViewModel.getScheduleBetweenStations(from: searchMachine.departureStation.code, to: searchMachine.destinationStation.code, hasTransfers: true)
                             }
                         }
@@ -76,7 +76,7 @@ struct ScheduleView: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 16)
                                 .frame(width: 150, height: 60)
-                                .foregroundColor(Color.blue)
+                                .foregroundColor(Color.ypBlue)
                             Text("Найти")
                                 .font(.system(size: 17, weight: .bold))
                                 .foregroundColor(Color.white)
@@ -85,7 +85,7 @@ struct ScheduleView: View {
             }
             Spacer()
             Divider()
-                .padding(.bottom, 16)
+                .padding(.bottom, 10)
         }
     }
 }

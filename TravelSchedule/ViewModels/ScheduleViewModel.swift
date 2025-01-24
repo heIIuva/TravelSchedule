@@ -16,9 +16,35 @@ final class ScheduleViewModel: ObservableObject {
     private let networkManager = NetworkManager.shared
     private let formatter = DateFormatter.dateFormatter
     
-    @Published var paths: [Path] = []
+    private var paths: [Path] = []
+    
+    @Published var filteredPaths: [Path] = []
     @Published var stateMachine = LoadingStateMachine()
     @Published var hasTransfers: Bool = true
+    
+    private var departureFilters: Set<DepartureTime> = []
+    @Published var isFiltered: Bool = false
+    @Published var morningFilter: Bool = false
+    @Published var afternoonFilter: Bool = false
+    @Published var eveningFilter: Bool = false
+    @Published var nightFilter: Bool = false
+    @Published var showTransfers: Bool = false
+    @Published var doNotShowTransfers: Bool = false
+    
+    func applyFilters() {
+        if morningFilter == true { departureFilters.insert(.morning) } else { departureFilters.remove(.morning) }
+        if afternoonFilter == true { departureFilters.insert(.afternoon) } else { departureFilters.remove(.afternoon) }
+        if eveningFilter == true { departureFilters.insert(.evening) } else { departureFilters.remove(.evening) }
+        if nightFilter == true { departureFilters.insert(.night) } else { departureFilters.remove(.night) }
+        
+        if doNotShowTransfers {
+            didApplyFilters(.no)
+        } else if showTransfers {
+            didApplyFilters(.yes)
+        } else {
+            didApplyFilters(.yes)
+        }
+    }
     
     func getScheduleBetweenStations(from: String, to: String, hasTransfers: Bool?) async {
         paths.removeAll()
@@ -37,10 +63,9 @@ final class ScheduleViewModel: ObservableObject {
                                       shortTitle: segment.thread?.short_title ?? "",
                                       carrierLogo: segment.thread?.carrier?.logo ?? "",
                                       duration: convertDuration(duration: segment.duration ?? 3600)))
-                    print("DEPARTURE \(segment.departure)")
-                    print("arrival \(segment.arrival)")
                 }
             sortPaths()
+            filteredPaths = paths
             stateMachine.state = .loaded
         } catch {
             stateMachine.state = .error(.connectionLost)
@@ -77,5 +102,29 @@ final class ScheduleViewModel: ObservableObject {
     private func sortPaths() {
         formatter.dateFormat = "d MMMM"
         paths.sort(by: { formatter.date(from: $0.startDate) ?? Date() < formatter.date(from: $1.startDate) ?? Date() })
+    }
+    
+    private func didApplyDepartureFilters() {
+        guard !departureFilters.isEmpty else { return }
+        filteredPaths.forEach { path in
+            if !departureFilters.contains({DepartureTime.from(string: path.departure)}()) {
+                filteredPaths = filteredPaths.filter { $0 != path }
+            }
+        }
+    }
+    
+    private func didApplyTransferFilter(_ filter: Transfer) {
+        switch filter {
+        case .no:
+            filteredPaths.removeAll(where: { $0.hasTransfers == true })
+        case .yes:
+            filteredPaths = filteredPaths
+        }
+    }
+    
+    private func didApplyFilters(_ filter: Transfer) {
+        filteredPaths = paths
+        didApplyTransferFilter(filter)
+        didApplyDepartureFilters()
     }
 }

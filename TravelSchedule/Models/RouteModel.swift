@@ -13,5 +13,5 @@ enum Route: Hashable {
     case goToStationsListView([Station], Directions)
     case goToCarrierListView
     case goToFiltersView
-    case goToCarrierInfoView
+    case goToCarrierInfoView(CarrierInfo)
 }

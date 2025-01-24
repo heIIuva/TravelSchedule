@@ -26,6 +26,11 @@
 		B512BBC72D3C3D9A00AE9AB7 /* CarrierService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBBE2D3C3D9A00AE9AB7 /* CarrierService.swift */; };
 		B512BBCA2D3C3DE400AE9AB7 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBC92D3C3DE400AE9AB7 /* JSONDecoder+Extensions.swift */; };
 		B512BBCF2D3C3EF000AE9AB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBCE2D3C3EF000AE9AB7 /* Constants.swift */; };
+		B556AC272D42FBF0004F51EF /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556AC262D42FBF0004F51EF /* FiltersView.swift */; };
+		B556AC2A2D42FCDA004F51EF /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556AC292D42FCDA004F51EF /* CheckboxView.swift */; };
+		B556AC2C2D42FCF4004F51EF /* CheckboxStyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556AC2B2D42FCF4004F51EF /* CheckboxStyleModel.swift */; };
+		B556AC312D4306D5004F51EF /* FiltersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556AC302D4306D5004F51EF /* FiltersModel.swift */; };
+		B556AC332D430B7A004F51EF /* CarrierInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556AC322D430B7A004F51EF /* CarrierInfoView.swift */; };
 		B5D33E382D3C3FD000C82128 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D33E372D3C3FD000C82128 /* NetworkManager.swift */; };
 		B5E5F6CD2D3D643C00A873ED /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F6CC2D3D643C00A873ED /* ErrorView.swift */; };
 		B5E5F6D02D3D7BD000A873ED /* UserAgreementWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F6CF2D3D7BD000A873ED /* UserAgreementWebView.swift */; };
@@ -88,6 +93,11 @@
 		B512BBC92D3C3DE400AE9AB7 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONDecoder+Extensions.swift"; path = "../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/Helpers/JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		B512BBCE2D3C3EF000AE9AB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B556AC222D428DDB004F51EF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		B556AC262D42FBF0004F51EF /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		B556AC292D42FCDA004F51EF /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
+		B556AC2B2D42FCF4004F51EF /* CheckboxStyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyleModel.swift; sourceTree = "<group>"; };
+		B556AC302D4306D5004F51EF /* FiltersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersModel.swift; sourceTree = "<group>"; };
+		B556AC322D430B7A004F51EF /* CarrierInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierInfoView.swift; sourceTree = "<group>"; };
 		B5D33E372D3C3FD000C82128 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "../../../../../../../Volumes/ADATA NH13/iOS dev/TrainsSchedule/TrainsSchedule/NetworkServices/NetworkManager.swift"; sourceTree = "<group>"; };
 		B5E5F6CC2D3D643C00A873ED /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		B5E5F6CF2D3D7BD000A873ED /* UserAgreementWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementWebView.swift; sourceTree = "<group>"; };
@@ -248,6 +258,9 @@
 				B5E5F72B2D41BC2400A873ED /* CarrierListRowView.swift */,
 				B5E5F7212D41B04000A873ED /* LogoView.swift */,
 				B5E5F6F62D3ED13F00A873ED /* RouterView.swift */,
+				B556AC262D42FBF0004F51EF /* FiltersView.swift */,
+				B556AC292D42FCDA004F51EF /* CheckboxView.swift */,
+				B556AC322D430B7A004F51EF /* CarrierInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +275,8 @@
 				B5E5F6FF2D3F21B900A873ED /* DirectionsModel.swift */,
 				B5E5F7102D41731200A873ED /* PathModel.swift */,
 				B5E5F7182D41950300A873ED /* CarrierInfoModel.swift */,
+				B556AC2B2D42FCF4004F51EF /* CheckboxStyleModel.swift */,
+				B556AC302D4306D5004F51EF /* FiltersModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -424,6 +439,7 @@
 				B512BB852D3C3C6C00AE9AB7 /* TravelScheduleApp.swift in Sources */,
 				B5E5F6F22D3ECE5100A873ED /* RouteModel.swift in Sources */,
 				B5E5F6E22D3DABF700A873ED /* CitiesViewModel.swift in Sources */,
+				B556AC272D42FBF0004F51EF /* FiltersView.swift in Sources */,
 				B512BBCF2D3C3EF000AE9AB7 /* Constants.swift in Sources */,
 				B5E5F71B2D41A9E400A873ED /* CarrierListView.swift in Sources */,
 				B512BBBF2D3C3D9A00AE9AB7 /* CopyrightService.swift in Sources */,
@@ -436,12 +452,16 @@
 				B5E5F6D62D3D7FB400A873ED /* ListRowView.swift in Sources */,
 				B5E5F7192D41950300A873ED /* CarrierInfoModel.swift in Sources */,
 				B5E5F6ED2D3DD8FA00A873ED /* LoadingState.swift in Sources */,
+				B556AC312D4306D5004F51EF /* FiltersModel.swift in Sources */,
 				B5E5F6F52D3ECED600A873ED /* Router.swift in Sources */,
+				B556AC2C2D42FCF4004F51EF /* CheckboxStyleModel.swift in Sources */,
 				B5E5F7162D417D6600A873ED /* ScheduleViewModel.swift in Sources */,
 				B512BBC62D3C3D9A00AE9AB7 /* NearestStationsService.swift in Sources */,
 				B5E5F7112D41731200A873ED /* PathModel.swift in Sources */,
+				B556AC2A2D42FCDA004F51EF /* CheckboxView.swift in Sources */,
 				B5E5F6F02D3DDFD500A873ED /* DateFormatter+Extensions.swift in Sources */,
 				B5E5F6DD2D3D829F00A873ED /* ScheduleView.swift in Sources */,
+				B556AC332D430B7A004F51EF /* CarrierInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

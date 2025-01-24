@@ -52,6 +52,7 @@ struct CarrierListRowView: View {
         .frame(height: 104)
         .background(Color.ypLightGray)
         .clipShape(RoundedRectangle(cornerRadius: 24))
+        .foregroundColor(Color.black)
     }
 }
 
