@@ -6,7 +6,6 @@
 //
 
 
-
 import OpenAPIURLSession
 
 
@@ -15,7 +14,7 @@ protocol NetworkManagerProtocol: AnyObject {
     
     func threadStations(uid: String) async throws -> ThreadStations
     
-    func scheduleBetween(from: String, to: String) async throws -> ScheduleBetween
+    func scheduleBetween(from: String, to: String, hasTransfers: Bool) async throws -> ScheduleBetween
     
     func stationSchedule(station: String) async throws -> ScheduleForStation
     
@@ -30,6 +29,9 @@ protocol NetworkManagerProtocol: AnyObject {
 
 
 final class NetworkManager: NetworkManagerProtocol {
+    
+    private init(){}
+    static let shared = NetworkManager()
     
     private let client = Client(
         serverURL: try! Servers.Server1.url(),
@@ -64,7 +66,8 @@ final class NetworkManager: NetworkManagerProtocol {
     
     func scheduleBetween(
         from: String,
-        to: String
+        to: String,
+        hasTransfers: Bool
     ) async throws -> ScheduleBetween {
         
         let service = ScheduleBetweenService(
@@ -72,7 +75,7 @@ final class NetworkManager: NetworkManagerProtocol {
             apikey: Constants.raspApiKey
         )
         
-        return try await service.getScheduleBetweenStations(from: from, to: to)
+        return try await service.getScheduleBetweenStations(from: from, to: to, hasTransfers: hasTransfers)
     }
     
     func stationSchedule(

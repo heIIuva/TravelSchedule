@@ -8,11 +8,26 @@
 import SwiftUI
 
 struct UserAgreementView: View {
+    
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         UserAgreementWebView(url: Constants.practicumURL)
-            .toolbar(.hidden, for: .tabBar)
-            .toolbarRole(.editor)
             .navigationTitle("Пользовательское соглашение")
+            .toolbarRole(.editor)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: {
+                        router.pop()
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .resizable()
+                            .frame(width: 11, height: 19)
+                            .font(Font.title.weight(.semibold))
+                    }
+                    .tint(.tabAccent)
+                }
+            }
     }
 }
 

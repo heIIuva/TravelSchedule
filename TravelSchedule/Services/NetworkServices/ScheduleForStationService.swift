@@ -41,5 +41,3 @@ final class ScheduleForStationService: ScheduleForStationServiceProtocol {
         return try response.ok.body.json
     }
 }
-
-

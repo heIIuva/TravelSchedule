@@ -80,7 +80,10 @@ struct CarrierListView: View {
                 Button(action: {
                     router.pop()
                 }) {
-                    Label("", image: "chevronLeft")
+                    Image(systemName: "chevron.left")
+                        .resizable()
+                        .frame(width: 11, height: 19)
+                        .font(Font.title.weight(.semibold))
                 }
                 .tint(.tabAccent)
             }

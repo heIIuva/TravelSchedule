@@ -13,7 +13,7 @@ typealias ScheduleBetween = Components.Schemas.SchedulesBetweenStationsResponse
 
 
 protocol ScheduleBetweenServiceProtocol {
-    func getScheduleBetweenStations(from: String, to: String) async throws -> ScheduleBetween
+    func getScheduleBetweenStations(from: String, to: String, hasTransfers: Bool?) async throws -> ScheduleBetween
 }
 
 //получение расписания между станциями
@@ -32,12 +32,14 @@ final class ScheduleBetweenService: ScheduleBetweenServiceProtocol {
   
     func getScheduleBetweenStations(
         from: String,
-        to: String
+        to: String,
+        hasTransfers: Bool?
     ) async throws -> ScheduleBetween {
         let response = try await client.getSchedulesBetweenStations(query: .init(
             apikey: apikey,
             from: from,
-            to: to
+            to: to,
+            transfers: hasTransfers
             )
         )
         return try response.ok.body.json
