@@ -72,5 +72,5 @@ struct SearchBarView: View {
 
 
 #Preview {
-    SearchBarView(searchText: .constant("nigga"))
+    SearchBarView(searchText: .constant("placeholder"))
 }
