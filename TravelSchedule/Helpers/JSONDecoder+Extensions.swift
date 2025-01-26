@@ -15,6 +15,6 @@ extension JSONDecoder {
         upTo maxBytes: Int = 100 * 1024 * 1024
     ) async throws -> T {
         let data = try await Data(collecting: httpBody, upTo: maxBytes)
-        return try self.decode(T.self, from: data)
+        return try decode(T.self, from: data)
     }
 }

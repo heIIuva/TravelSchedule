@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Directions: Hashable {
+enum Direction: Hashable {
     case departure
     case destination
 }

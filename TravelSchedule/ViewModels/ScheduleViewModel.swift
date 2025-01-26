@@ -14,6 +14,7 @@ typealias Segment = Components.Schemas.Segment
 final class ScheduleViewModel: ObservableObject {
     
     private let networkManager = NetworkManager.shared
+    
     private let formatter = DateFormatter.dateFormatter
     
     private var paths: [Path] = []
@@ -32,15 +33,13 @@ final class ScheduleViewModel: ObservableObject {
     @Published var doNotShowTransfers: Bool = false
     
     func applyFilters() {
-        if morningFilter == true { departureFilters.insert(.morning) } else { departureFilters.remove(.morning) }
-        if afternoonFilter == true { departureFilters.insert(.afternoon) } else { departureFilters.remove(.afternoon) }
-        if eveningFilter == true { departureFilters.insert(.evening) } else { departureFilters.remove(.evening) }
-        if nightFilter == true { departureFilters.insert(.night) } else { departureFilters.remove(.night) }
+        if morningFilter { departureFilters.insert(.morning) } else { departureFilters.remove(.morning) }
+        if afternoonFilter { departureFilters.insert(.afternoon) } else { departureFilters.remove(.afternoon) }
+        if eveningFilter { departureFilters.insert(.evening) } else { departureFilters.remove(.evening) }
+        if nightFilter { departureFilters.insert(.night) } else { departureFilters.remove(.night) }
         
         if doNotShowTransfers {
             didApplyFilters(.no)
-        } else if showTransfers {
-            didApplyFilters(.yes)
         } else {
             didApplyFilters(.yes)
         }
@@ -116,7 +115,7 @@ final class ScheduleViewModel: ObservableObject {
     private func didApplyTransferFilter(_ filter: Transfer) {
         switch filter {
         case .no:
-            filteredPaths.removeAll(where: { $0.hasTransfers == true })
+            filteredPaths.removeAll(where: { $0.hasTransfers })
         case .yes:
             filteredPaths = filteredPaths
         }

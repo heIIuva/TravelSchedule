@@ -19,8 +19,6 @@ struct CarrierListView: View {
                 .font(.system(size: 24, weight: .bold))
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal, 16)
-            VStack {
-            }
             switch viewModel.stateMachine.state {
             case .loading:
                 Spacer()
@@ -55,21 +53,23 @@ struct CarrierListView: View {
             Button(
                 action: { router.push(.goToFiltersView) },
                 label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 16)
-                            .frame(width: 343, height: 60)
-                            .foregroundColor(Color.ypBlue)
-                        HStack {
-                            Text("Уточнить время")
-                                .font(.system(size: 17, weight: .bold))
-                                .foregroundColor(Color.white)
-                            if viewModel.isFiltered {
-                                Circle()
-                                    .tint(Color.ypRed)
-                                    .frame(width: 8, height: 8)
+                    if !viewModel.filteredPaths.isEmpty {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 16)
+                                .frame(width: 343, height: 60)
+                                .foregroundColor(Color.ypBlue)
+                            HStack {
+                                Text("Уточнить время")
+                                    .font(.system(size: 17, weight: .bold))
+                                    .foregroundColor(Color.white)
+                                if viewModel.isFiltered {
+                                    Circle()
+                                        .tint(Color.ypRed)
+                                        .frame(width: 8, height: 8)
+                                }
                             }
+                            .frame(alignment: .center)
                         }
-                        .frame(alignment: .center)
                     }
                 }
             )

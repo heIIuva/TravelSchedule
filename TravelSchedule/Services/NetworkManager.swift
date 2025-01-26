@@ -5,7 +5,7 @@
 //  Created by big stepper on 11/12/2024.
 //
 
-
+import Foundation
 import OpenAPIURLSession
 
 
@@ -30,13 +30,13 @@ protocol NetworkManagerProtocol: AnyObject {
 
 final class NetworkManager: NetworkManagerProtocol {
     
-    private init(){}
     static let shared = NetworkManager()
-    
-    private let client = Client(
-        serverURL: try! Servers.Server1.url(),
-        transport: URLSessionTransport()
-    )
+    private init() {
+        let url = try? Servers.Server1.url()
+        self.client = Client(serverURL: url ?? URL(filePath: ""), transport: URLSessionTransport())
+    }
+        
+    private let client: Client
     
     func nearestStations(
         lat: Double,

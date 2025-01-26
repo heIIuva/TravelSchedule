@@ -14,10 +14,10 @@ final class CitiesViewModel: ObservableObject {
     private let networkManager = NetworkManager.shared
     
     @Published var searchText: String = ""
-    @Published var cities: [City] = []
-    @Published var stateMachine = LoadingStateMachine()
+    @Published private(set) var cities: [City] = []
+    @Published private(set) var stateMachine = LoadingStateMachine()
     
-    func filteredCities() -> [City] {
+    func getFilteredCities() -> [City] {
         searchText.isEmpty ? cities : cities.filter { $0.title.lowercased().contains(searchText.lowercased())}
     }
     
