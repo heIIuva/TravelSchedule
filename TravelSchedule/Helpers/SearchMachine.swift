@@ -22,7 +22,7 @@ final class SearchMachine: ObservableObject {
         (departureStation, destinationStation) = (destinationStation, departureStation)
     }
     
-    func city(for direction: Directions, _ city: String) {
+    func setCity(for direction: Direction, _ city: String) {
         switch direction {
         case .departure:
             departureCity = city
@@ -31,7 +31,7 @@ final class SearchMachine: ObservableObject {
         }
     }
     
-    func text(for direction: Directions, _ station: Station) {
+    func setText(for direction: Direction, _ station: Station) {
         switch direction {
         case .departure:
             departureStation = station

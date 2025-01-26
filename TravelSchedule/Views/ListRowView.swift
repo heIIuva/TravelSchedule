@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListRowView: View {
-    @State var text: String
+    let text: String
     
     var body: some View {
         HStack {
@@ -26,5 +26,5 @@ struct ListRowView: View {
 }
 
 #Preview {
-    ListRowView(text: "Nigga")
+    ListRowView(text: "")
 }

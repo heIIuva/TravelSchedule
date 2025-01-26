@@ -73,13 +73,13 @@ struct FiltersView: View {
                 }
             }
             .scrollIndicators(.hidden)
-            .padding(.bottom)
-            if viewModel.morningFilter == true ||
-                viewModel.afternoonFilter == true ||
-                viewModel.eveningFilter == true ||
-                viewModel.nightFilter == true ||
-                viewModel.showTransfers == true ||
-                viewModel.doNotShowTransfers == true {
+            .padding(.bottom) 
+            if viewModel.morningFilter ||
+                viewModel.afternoonFilter ||
+                viewModel.eveningFilter ||
+                viewModel.nightFilter ||
+                viewModel.showTransfers ||
+                viewModel.doNotShowTransfers {
                 VStack {
                     Spacer()
                     Button(

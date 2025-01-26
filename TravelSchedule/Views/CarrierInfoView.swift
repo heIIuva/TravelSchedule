@@ -14,7 +14,7 @@ struct CarrierInfoView: View {
     let carrier: CarrierInfo
     
     var body: some View {
-        VStack(alignment: .center, spacing: 16) {
+        VStack(spacing: 16) {
             AsyncImage(url: URL(string: carrier.logo)) { phase in
                 switch phase {
                 case .failure:

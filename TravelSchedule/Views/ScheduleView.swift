@@ -43,13 +43,13 @@ struct ScheduleView: View {
                     })
                 }
                 .background(Color.white.cornerRadius(20))
-                .padding(.all, 16)
+                .padding()
                 Button(action: {
-                        searchMachine.swapDirections()
-                        Task {
-                            await scheduleViewModel.getScheduleBetweenStations(from: searchMachine.departureStation.code, to: searchMachine.destinationStation.code, hasTransfers: true)
-                        }
+                    searchMachine.swapDirections()
+                    Task {
+                        await scheduleViewModel.getScheduleBetweenStations(from: searchMachine.departureStation.code, to: searchMachine.destinationStation.code, hasTransfers: true)
                     }
+                }
                 ) {
                     Image("swapDirections")
                         .tint(Color.ypBlue)

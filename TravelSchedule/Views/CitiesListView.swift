@@ -14,7 +14,7 @@ struct CitiesListView: View {
     @EnvironmentObject var viewModel: CitiesViewModel
     
     
-    let direction: Directions
+    let direction: Direction
     
     var body: some View {
         VStack {
@@ -30,18 +30,18 @@ struct CitiesListView: View {
                 Spacer()
             case .loaded:
                 Spacer()
-                if viewModel.filteredCities().isEmpty {
+                if viewModel.getFilteredCities().isEmpty {
                     Text("Город не найден")
                         .font(.system(size: 24, weight: .bold))
                 Spacer()
                 } else {
-                    List(viewModel.filteredCities()) { city in
+                    List(viewModel.getFilteredCities()) { city in
                         ListRowView(text: city.title)
                             .padding(.horizontal, 16)
                             .listRowSeparator(.hidden)
                             .listRowInsets(.init(.zero))
                             .onTapGesture {
-                                searchMachine.city(for: direction, city.title)
+                                searchMachine.setCity(for: direction, city.title)
                                 router.push(.goToStationsListView(city.stations, self.direction))
                             }
                     }

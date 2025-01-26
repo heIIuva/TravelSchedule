@@ -16,7 +16,7 @@ struct StationsListView: View {
     @State private var searchText: String = ""
     
     let stations: [Station]
-    let direction: Directions
+    let direction: Direction
     
     private var filteredStations: [Station] {
         searchText.isEmpty ? stations : stations.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
@@ -38,7 +38,7 @@ struct StationsListView: View {
                     .listRowSeparator(.hidden)
                     .listRowInsets(.init(.zero))
                     .onTapGesture {
-                        searchMachine.text(for: direction, station)
+                        searchMachine.setText(for: direction, station)
                         router.popToRoot()
                     }
             }

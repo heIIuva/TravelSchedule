@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CarrierListRowView: View {
     
-    var path: Path
+    let path: Path
     
     var body: some View {
         HStack {
