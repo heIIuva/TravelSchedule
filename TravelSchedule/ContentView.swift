@@ -8,17 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var searchMachine = SearchMachine()
+    @StateObject private var citiesViewModel = CitiesViewModel()
+    @StateObject private var scheduleViewModel = ScheduleViewModel()
+    
+    @Binding var isDarkMode: Bool
+    @State private var selectedTab: Int = 0
+        
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        RouterView {
+            TabView {
+                VStack {
+                    ScheduleView()
+                }
+                .tabItem {
+                    Image(.scheduleTab)
+                }
+                .tag(0)
+                VStack {
+                    SettingsView(isDarkMode: $isDarkMode)
+                }
+                .tabItem {
+                    Image(.settingsTab)
+                }
+                .tag(1)
+            }
+            .tint(.tabAccent)
         }
-        .padding()
+        .environmentObject(searchMachine)
+        .environmentObject(citiesViewModel)
+        .environmentObject(scheduleViewModel)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(isDarkMode: .constant(false))
 }
