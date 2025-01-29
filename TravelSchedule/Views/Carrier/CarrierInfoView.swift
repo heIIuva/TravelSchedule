@@ -38,18 +38,18 @@ struct CarrierInfoView: View {
         HStack {
             VStack(alignment: .leading, spacing: 16) {
                 Text(carrier.title)
-                    .font(.system(size: 24, weight: .bold))
+                    .font(.bold24)
                 
                 VStack(alignment: .leading, spacing: 16) {
                     VStack(alignment: .leading) {
                         Text("E-mail")
                         if carrier.email.isEmpty {
                             Text("Не предоставлен")
-                                .font(.system(size: 12))
+                                .font(.regular12)
                                 .foregroundStyle(Color.ypRed)
                         } else {
                             Text(carrier.email)
-                                .font(.system(size: 12))
+                                .font(.regular12)
                                 .foregroundStyle(Color.ypBlue)
                         }
                     }
@@ -58,11 +58,11 @@ struct CarrierInfoView: View {
                         Text("Телефон")
                         if carrier.phone.isEmpty {
                             Text("Не предоставлен")
-                                .font(.system(size: 12))
+                                .font(.regular12)
                                 .foregroundStyle(Color.ypRed)
                         } else {
                             Text(carrier.phone)
-                                .font(.system(size: 12))
+                                .font(.regular12)
                                 .foregroundStyle(Color.ypBlue)
                         }
                     }

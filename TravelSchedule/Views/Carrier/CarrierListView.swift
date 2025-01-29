@@ -16,7 +16,7 @@ struct CarrierListView: View {
     var body: some View {
         VStack {
             Text("\(searchMachine.departureText) → \(searchMachine.destinationText)")
-                .font(.system(size: 24, weight: .bold))
+                .font(.bold24)
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal, 16)
             switch viewModel.stateMachine.state {
@@ -32,7 +32,7 @@ struct CarrierListView: View {
                 Spacer()
                 if viewModel.filteredPaths.isEmpty {
                     Text("Вариантов нет")
-                        .font(.system(size: 24, weight: .bold))
+                        .font(.bold24)
                     Spacer()
                 } else {
                     List(viewModel.filteredPaths) { path in
@@ -60,7 +60,7 @@ struct CarrierListView: View {
                                 .foregroundColor(Color.ypBlue)
                             HStack {
                                 Text("Уточнить время")
-                                    .font(.system(size: 17, weight: .bold))
+                                    .font(.bold17)
                                     .foregroundColor(Color.white)
                                 if viewModel.isFiltered {
                                     Circle()

@@ -32,7 +32,7 @@ struct CitiesListView: View {
                 Spacer()
                 if viewModel.getFilteredCities().isEmpty {
                     Text("Город не найден")
-                        .font(.system(size: 24, weight: .bold))
+                        .font(.bold24)
                 Spacer()
                 } else {
                     List(viewModel.getFilteredCities()) { city in

@@ -28,7 +28,7 @@ struct SettingsView: View {
             Text("Приложение использует API «Яндекс.Расписания»")
             Text("Версия 1.0 (beta)")
         }
-        .font(.system(size: 12, weight: .regular))
+        .font(.regular12)
         .padding(.bottom, 24)
         Divider()
             .padding(.bottom, 10)

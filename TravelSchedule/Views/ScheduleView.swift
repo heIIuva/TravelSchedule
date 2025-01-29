@@ -24,7 +24,7 @@ struct ScheduleView: View {
                             .foregroundColor(Color.ypGray)
                     })
                     .foregroundColor(Color.black)
-                    .font(.system(size: 17))
+                    .font(.regular17)
                     .frame(height: 48)
                     .padding(.leading, 16)
                     .simultaneousGesture(TapGesture().onEnded {
@@ -35,7 +35,7 @@ struct ScheduleView: View {
                             .foregroundColor(Color.ypGray)
                     })
                     .foregroundColor(Color.black)
-                    .font(.system(size: 17))
+                    .font(.regular17)
                     .frame(height: 48)
                     .padding(.leading, 16)
                     .simultaneousGesture(TapGesture().onEnded {
@@ -78,7 +78,7 @@ struct ScheduleView: View {
                                 .frame(width: 150, height: 60)
                                 .foregroundColor(Color.ypBlue)
                             Text("Найти")
-                                .font(.system(size: 17, weight: .bold))
+                                .font(.bold17)
                                 .foregroundColor(Color.white)
                         }
                     })

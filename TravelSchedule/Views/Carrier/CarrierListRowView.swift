@@ -22,7 +22,7 @@ struct CarrierListRowView: View {
                             && (path.transfer?.isEmpty != true),
                             let transferName = path.transfer {
                                 Text("с пересадкой в \(transferName)")
-                                    .font(.system(size: 12, weight: .regular))
+                                    .font(.regular12)
                                     .foregroundStyle(Color.ypRed)
 
                         }
@@ -30,7 +30,7 @@ struct CarrierListRowView: View {
                     Spacer()
                     VStack {
                         Text(path.startDate)
-                            .font(.system(size: 12, weight: .regular))
+                            .font(.regular12)
                         Spacer()
                     }
                 }
@@ -40,7 +40,7 @@ struct CarrierListRowView: View {
                         Divider()
                     }
                     Text(path.duration)
-                        .font(.system(size: 12, weight: .regular))
+                        .font(.regular12)
                     VStack {
                         Divider()
                     }

@@ -15,7 +15,7 @@ struct ErrorView: View {
         VStack {
             model.image
             Text(model.description)
-                .font(.system(size: 24, weight: .bold))
+                .font(.bold24)
         }
     }
 }

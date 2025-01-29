@@ -29,7 +29,7 @@ struct StationsListView: View {
                 VStack {
                     Spacer()
                     Text("Станция не найдена")
-                        .font(.system(size: 24, weight: .bold))
+                        .font(.bold24)
                 }
             }
             List(filteredStations) { station in
