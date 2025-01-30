@@ -32,11 +32,7 @@
 		B556AC4D2D443323004F51EF /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556AC4C2D443323004F51EF /* JSONDecoder+Extensions.swift */; };
 		B556AC4F2D443443004F51EF /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = B556AC4E2D443443004F51EF /* openapi.yaml */; };
 		B556AC512D443471004F51EF /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = B556AC502D443471004F51EF /* openapi-generator-config.yaml */; };
-		B5A9725E2D4A92F20003EC4B /* CloseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9725D2D4A92F20003EC4B /* CloseButtonView.swift */; };
 		B5A972602D4A944F0003EC4B /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9725F2D4A944F0003EC4B /* Font+Extensions.swift */; };
-		B5A972622D4A98E90003EC4B /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A972612D4A98E90003EC4B /* Story.swift */; };
-		B5A972642D4A9B2E0003EC4B /* TimerConfiguration+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A972632D4A9B2E0003EC4B /* TimerConfiguration+Calculations.swift */; };
-		B5A972662D4A9E5E0003EC4B /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A972652D4A9E5E0003EC4B /* ProgressBarView.swift */; };
 		B5E5F6CD2D3D643C00A873ED /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F6CC2D3D643C00A873ED /* ErrorView.swift */; };
 		B5E5F6D02D3D7BD000A873ED /* UserAgreementWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F6CF2D3D7BD000A873ED /* UserAgreementWebView.swift */; };
 		B5E5F6D32D3D7D6F00A873ED /* UserAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F6D22D3D7D6F00A873ED /* UserAgreementView.swift */; };
@@ -104,11 +100,7 @@
 		B556AC4C2D443323004F51EF /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		B556AC4E2D443443004F51EF /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		B556AC502D443471004F51EF /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
-		B5A9725D2D4A92F20003EC4B /* CloseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButtonView.swift; sourceTree = "<group>"; };
 		B5A9725F2D4A944F0003EC4B /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
-		B5A972612D4A98E90003EC4B /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
-		B5A972632D4A9B2E0003EC4B /* TimerConfiguration+Calculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerConfiguration+Calculations.swift"; sourceTree = "<group>"; };
-		B5A972652D4A9E5E0003EC4B /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		B5E5F6CC2D3D643C00A873ED /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		B5E5F6CF2D3D7BD000A873ED /* UserAgreementWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementWebView.swift; sourceTree = "<group>"; };
 		B5E5F6D22D3D7D6F00A873ED /* UserAgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementView.swift; sourceTree = "<group>"; };
@@ -231,7 +223,6 @@
 				B5E5F7012D40538400A873ED /* UINavigationController+Extensions.swift */,
 				B556AC4C2D443323004F51EF /* JSONDecoder+Extensions.swift */,
 				B5A9725F2D4A944F0003EC4B /* Font+Extensions.swift */,
-				B5A972632D4A9B2E0003EC4B /* TimerConfiguration+Calculations.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -282,7 +273,6 @@
 				B5E5F7182D41950300A873ED /* CarrierInfo.swift */,
 				B556AC2B2D42FCF4004F51EF /* CheckboxStyle.swift */,
 				B556AC302D4306D5004F51EF /* TransferAndDeparture.swift */,
-				B5A972612D4A98E90003EC4B /* Story.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,8 +327,6 @@
 		B5A9725C2D4A92E30003EC4B /* Story */ = {
 			isa = PBXGroup;
 			children = (
-				B5A9725D2D4A92F20003EC4B /* CloseButtonView.swift */,
-				B5A972652D4A9E5E0003EC4B /* ProgressBarView.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -475,10 +463,8 @@
 				B556AC4B2D443313004F51EF /* ThreadStationsService.swift in Sources */,
 				B556AC3F2D443293004F51EF /* CopyrightService.swift in Sources */,
 				B5E5F6F72D3ED13F00A873ED /* RouterView.swift in Sources */,
-				B5A972642D4A9B2E0003EC4B /* TimerConfiguration+Calculations.swift in Sources */,
 				B5E5F6D92D3D7FF000A873ED /* SettingsView.swift in Sources */,
 				B5E5F7022D40538400A873ED /* UINavigationController+Extensions.swift in Sources */,
-				B5A9725E2D4A92F20003EC4B /* CloseButtonView.swift in Sources */,
 				B5E5F6E82D3DAC9C00A873ED /* Station.swift in Sources */,
 				B5E5F70A2D40805100A873ED /* StationsListView.swift in Sources */,
 				B5E5F6D32D3D7D6F00A873ED /* UserAgreementView.swift in Sources */,
@@ -488,7 +474,6 @@
 				B5E5F72C2D41BC2400A873ED /* CarrierListRowView.swift in Sources */,
 				B512BB852D3C3C6C00AE9AB7 /* TravelScheduleApp.swift in Sources */,
 				B5E5F6F22D3ECE5100A873ED /* Route.swift in Sources */,
-				B5A972622D4A98E90003EC4B /* Story.swift in Sources */,
 				B5E5F6E22D3DABF700A873ED /* CitiesViewModel.swift in Sources */,
 				B556AC272D42FBF0004F51EF /* FiltersView.swift in Sources */,
 				B512BBCF2D3C3EF000AE9AB7 /* Constants.swift in Sources */,
@@ -503,7 +488,6 @@
 				B5E5F6ED2D3DD8FA00A873ED /* LoadingState.swift in Sources */,
 				B556AC312D4306D5004F51EF /* TransferAndDeparture.swift in Sources */,
 				B5E5F6F52D3ECED600A873ED /* Router.swift in Sources */,
-				B5A972662D4A9E5E0003EC4B /* ProgressBarView.swift in Sources */,
 				B5A972602D4A944F0003EC4B /* Font+Extensions.swift in Sources */,
 				B556AC2C2D42FCF4004F51EF /* CheckboxStyle.swift in Sources */,
 				B5E5F7162D417D6600A873ED /* ScheduleViewModel.swift in Sources */,
@@ -689,7 +673,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -723,7 +707,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

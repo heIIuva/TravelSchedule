@@ -61,7 +61,6 @@ struct ScheduleView: View {
             }
             .background(Color.ypBlue.cornerRadius(20))
             .padding(.horizontal, 16)
-            .padding(.top, 208)
             if !searchMachine.departureText.isEmpty && !searchMachine.destinationText.isEmpty {
                 Button(
                     action: { 
