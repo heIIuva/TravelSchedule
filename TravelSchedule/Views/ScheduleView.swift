@@ -14,8 +14,13 @@ struct ScheduleView: View {
     @EnvironmentObject var searchMachine: SearchMachine
     @EnvironmentObject var citiesViewModel: CitiesViewModel
     @EnvironmentObject var scheduleViewModel: ScheduleViewModel
-        
+    @StateObject private var storiesViewModel = StoriesViewModel()
+    
     var body: some View {
+        StoryPreviewList(isPresented: false)
+            .environmentObject(storiesViewModel)
+            .frame(height: 188)
+            .padding(.bottom, 20)
         VStack(spacing: 16) {
             HStack {
                 VStack {
