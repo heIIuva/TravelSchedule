@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@MainActor
 struct StoryContentView: View {
     let stories: [Story]
     @Binding var isPresented: Bool

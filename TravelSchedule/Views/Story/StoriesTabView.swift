@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@MainActor
 struct StoriesTabView: View {
     let stories: [Story]
     @Binding var currentStoryIndex: Int
