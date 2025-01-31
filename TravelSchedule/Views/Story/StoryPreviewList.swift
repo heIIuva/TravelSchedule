@@ -22,13 +22,13 @@ struct StoryPreviewList: View {
                 ForEach(viewModel.packs) { pack in
                     StoryPreview(pack: pack)
                         .onTapGesture {
+                            viewModel.setSeen(pack)
                             withAnimation {
-                                viewModel.setSeen(pack)
                                 isPresented.toggle()
                             }
                         }
                         .fullScreenCover(isPresented: $isPresented) {
-                            StoryContentView(stories: pack.stories, isPresented: $isPresented)
+                            StoryContentView(stories: viewModel.currentStories, isPresented: $isPresented)
                         }
                 }
             }

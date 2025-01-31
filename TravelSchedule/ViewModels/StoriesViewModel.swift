@@ -22,12 +22,16 @@ final class StoriesViewModel: ObservableObject {
             StoryPack(id: 7, preview: .storyPreview8, stories: [Story(id: 0, image: .story15), Story(id: 1, image: .story16)]),
             StoryPack(id: 8, preview: .storyPreview9, stories: [Story(id: 0, image: .story17), Story(id: 1, image: .story18)])
         ]
+        
+        
     }
     
     @Published private(set) var packs: [StoryPack] = []
-    
+    @Published private(set) var currentStories: [Story] = []
+        
     func setSeen(_ pack: StoryPack) {
-        guard let seen = packs.firstIndex(where: {$0.id == pack.id} ) else { return }
-        packs[seen].seen = true
+        guard let index = packs.firstIndex(where: {$0.id == pack.id} ) else { return }
+        packs[index].seen = true
+        currentStories = packs[index].stories
     }
 }
