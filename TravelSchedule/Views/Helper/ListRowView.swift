@@ -13,7 +13,7 @@ struct ListRowView: View {
     var body: some View {
         HStack {
             Text(text)
-                .font(.system(size: 17, weight: .regular))
+                .font(.regular17)
             Spacer()
             Image(systemName: "chevron.right")
                 .resizable()

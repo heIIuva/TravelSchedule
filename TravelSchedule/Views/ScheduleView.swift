@@ -14,8 +14,13 @@ struct ScheduleView: View {
     @EnvironmentObject var searchMachine: SearchMachine
     @EnvironmentObject var citiesViewModel: CitiesViewModel
     @EnvironmentObject var scheduleViewModel: ScheduleViewModel
-        
+    @StateObject private var storiesViewModel = StoriesViewModel()
+    
     var body: some View {
+        StoryPreviewList(isPresented: false)
+            .environmentObject(storiesViewModel)
+            .frame(height: 188)
+            .padding(.bottom, 20)
         VStack(spacing: 16) {
             HStack {
                 VStack {
@@ -24,7 +29,7 @@ struct ScheduleView: View {
                             .foregroundColor(Color.ypGray)
                     })
                     .foregroundColor(Color.black)
-                    .font(.system(size: 17))
+                    .font(.regular17)
                     .frame(height: 48)
                     .padding(.leading, 16)
                     .simultaneousGesture(TapGesture().onEnded {
@@ -35,7 +40,7 @@ struct ScheduleView: View {
                             .foregroundColor(Color.ypGray)
                     })
                     .foregroundColor(Color.black)
-                    .font(.system(size: 17))
+                    .font(.regular17)
                     .frame(height: 48)
                     .padding(.leading, 16)
                     .simultaneousGesture(TapGesture().onEnded {
@@ -61,7 +66,6 @@ struct ScheduleView: View {
             }
             .background(Color.ypBlue.cornerRadius(20))
             .padding(.horizontal, 16)
-            .padding(.top, 208)
             if !searchMachine.departureText.isEmpty && !searchMachine.destinationText.isEmpty {
                 Button(
                     action: { 
@@ -78,7 +82,7 @@ struct ScheduleView: View {
                                 .frame(width: 150, height: 60)
                                 .foregroundColor(Color.ypBlue)
                             Text("Найти")
-                                .font(.system(size: 17, weight: .bold))
+                                .font(.bold17)
                                 .foregroundColor(Color.white)
                         }
                     })

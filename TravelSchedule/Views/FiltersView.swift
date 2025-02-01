@@ -17,7 +17,7 @@ struct FiltersView: View {
             ScrollView {
                 LazyVStack(alignment: .leading) {
                     Text("Время отправления")
-                        .font(.system(size: 24, weight: .bold))
+                        .font(.bold24)
                         .padding(.vertical, 16)
                     Group {
                         Toggle(DepartureTime.morning.rawValue,
@@ -30,10 +30,10 @@ struct FiltersView: View {
                                isOn: $viewModel.nightFilter)
                     }
                     .frame(height: 60)
-                    .font(.system(size: 17, weight: .regular))
+                    .font(.regular17)
                     .toggleStyle(CheckboxView(style: .checkbox))
                     Text("Показывать варианты с пересадками")
-                        .font(.system(size: 24, weight: .bold))
+                        .font(.bold24)
                         .padding(.vertical, 16)
                     Group {
                         Toggle(Transfer.yes.rawValue,
@@ -52,7 +52,7 @@ struct FiltersView: View {
                         }
                     }
                     .frame(height: 60)
-                    .font(.system(size: 17, weight: .regular))
+                    .font(.regular17)
                     .toggleStyle(CheckboxView(style: .circle))
                 }
                 .padding(.horizontal ,16)
@@ -95,7 +95,7 @@ struct FiltersView: View {
                                     .frame(height: 60)
                                     .foregroundColor(.ypBlue)
                                 Text("Применить")
-                                    .font(.system(size: 17, weight: .bold))
+                                    .font(.bold17)
                                     .foregroundColor(Color.white)
                             }
                         })
