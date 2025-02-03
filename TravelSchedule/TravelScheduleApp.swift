@@ -8,13 +8,10 @@
 import SwiftUI
 
 @main
-struct TravelScheduleApp: App {
-    @State private var isDarkMode: Bool = false
-    
+struct TravelScheduleApp: App {    
     var body: some Scene {
         WindowGroup {
-            ContentView(isDarkMode: $isDarkMode)
-                .environment(\.colorScheme, isDarkMode ? .dark : .light)
+            ContentView()
         }
     }
 }

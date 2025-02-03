@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum Transfer: String, Hashable {
+enum Transfer: String, Hashable, Sendable {
     case yes = "Да"
     case no = "Нет"
 }
 
-enum DepartureTime: String, Hashable {
+enum DepartureTime: String, Hashable, Sendable {
     case morning = "Утро 06:00 - 12:00"
     case afternoon = "День 12:00 - 18:00"
     case evening = "Вечер 18:00 - 00:00"

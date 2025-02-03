@@ -28,7 +28,7 @@ protocol NetworkManagerProtocol: AnyObject {
 }
 
 
-final class NetworkManager: NetworkManagerProtocol {
+actor NetworkManager: NetworkManagerProtocol {
     
     static let shared = NetworkManager()
     private init() {

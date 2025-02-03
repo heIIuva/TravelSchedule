@@ -14,5 +14,5 @@ enum Route: Hashable {
     case goToCarrierListView
     case goToFiltersView
     case goToCarrierInfoView(CarrierInfo)
-    case goToUserAgreementView
+    case goToUserAgreementView(String)
 }

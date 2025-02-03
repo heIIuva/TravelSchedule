@@ -15,6 +15,7 @@
 		B512BB972D3C3CE300AE9AB7 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = B512BB962D3C3CE300AE9AB7 /* OpenAPIRuntime */; };
 		B512BBAA2D3C3D4600AE9AB7 /* TravelScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBA92D3C3D4600AE9AB7 /* TravelScheduleTests.swift */; };
 		B512BBCF2D3C3EF000AE9AB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512BBCE2D3C3EF000AE9AB7 /* Constants.swift */; };
+		B555307E2D515C6B0026AAD2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B555307D2D515C6B0026AAD2 /* SettingsViewModel.swift */; };
 		B556AC272D42FBF0004F51EF /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556AC262D42FBF0004F51EF /* FiltersView.swift */; };
 		B556AC2A2D42FCDA004F51EF /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556AC292D42FCDA004F51EF /* CheckboxView.swift */; };
 		B556AC2C2D42FCF4004F51EF /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556AC2B2D42FCF4004F51EF /* CheckboxStyle.swift */; };
@@ -95,6 +96,7 @@
 		B512BBA72D3C3D4600AE9AB7 /* TravelScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B512BBA92D3C3D4600AE9AB7 /* TravelScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelScheduleTests.swift; sourceTree = "<group>"; };
 		B512BBCE2D3C3EF000AE9AB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B555307D2D515C6B0026AAD2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		B556AC222D428DDB004F51EF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		B556AC262D42FBF0004F51EF /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
 		B556AC292D42FCDA004F51EF /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				B5E5F6E12D3DABF700A873ED /* CitiesViewModel.swift */,
 				B5E5F7152D417D6600A873ED /* ScheduleViewModel.swift */,
 				B5FE288D2D4C03EF00B951BE /* StoriesViewModel.swift */,
+				B555307D2D515C6B0026AAD2 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				B5E5F6E22D3DABF700A873ED /* CitiesViewModel.swift in Sources */,
 				B556AC272D42FBF0004F51EF /* FiltersView.swift in Sources */,
 				B512BBCF2D3C3EF000AE9AB7 /* Constants.swift in Sources */,
+				B555307E2D515C6B0026AAD2 /* SettingsViewModel.swift in Sources */,
 				B5E5F71B2D41A9E400A873ED /* CarrierListView.swift in Sources */,
 				B5E5F6D02D3D7BD000A873ED /* UserAgreementWebView.swift in Sources */,
 				B556AC492D443300004F51EF /* StationsListService.swift in Sources */,
@@ -657,6 +661,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
 			};
 			name = Debug;
 		};
@@ -713,6 +718,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

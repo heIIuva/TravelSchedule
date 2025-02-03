@@ -12,8 +12,8 @@ struct ContentView: View {
     @StateObject private var searchMachine = SearchMachine()
     @StateObject private var citiesViewModel = CitiesViewModel()
     @StateObject private var scheduleViewModel = ScheduleViewModel()
+    @StateObject private var settingsViewModel = SettingsViewModel()
     
-    @Binding var isDarkMode: Bool
     @State private var selectedTab: Int = 0
     
     var body: some View {
@@ -27,7 +27,7 @@ struct ContentView: View {
                 }
                 .tag(0)
                 VStack {
-                    SettingsView(isDarkMode: $isDarkMode)
+                    SettingsView(isDarkMode: settingsViewModel.isDarkMode)
                 }
                 .tabItem {
                     Image(.settingsTab)
@@ -39,9 +39,11 @@ struct ContentView: View {
         .environmentObject(searchMachine)
         .environmentObject(citiesViewModel)
         .environmentObject(scheduleViewModel)
+        .environmentObject(settingsViewModel)
+        .environment(\.colorScheme, settingsViewModel.isDarkMode ? .dark : .light)
     }
 }
 
 #Preview {
-    ContentView(isDarkMode: .constant(false))
+    ContentView()
 }

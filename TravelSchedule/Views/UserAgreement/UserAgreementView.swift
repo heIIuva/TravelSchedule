@@ -9,10 +9,12 @@ import SwiftUI
 
 struct UserAgreementView: View {
     
+    let url: String
+    
     @EnvironmentObject var router: Router
     
     var body: some View {
-        UserAgreementWebView(url: Constants.practicumURL)
+        UserAgreementWebView(url: url)
             .navigationTitle("Пользовательское соглашение")
             .toolbarRole(.editor)
             .toolbar {
@@ -32,5 +34,5 @@ struct UserAgreementView: View {
 }
 
 #Preview {
-    UserAgreementView()
+    UserAgreementView(url: Constants.practicumURL)
 }

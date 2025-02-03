@@ -18,7 +18,7 @@ protocol CarrierServiceProtocol {
 }
 
 //получение информации о перевозчике
-final class CarrierService: CarrierServiceProtocol {
+actor CarrierService: CarrierServiceProtocol {
     
     private let client: Client
     private let apikey: String

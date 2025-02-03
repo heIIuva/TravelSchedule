@@ -17,7 +17,7 @@ protocol CopyrightServiceProtocol {
 }
 
 //получение копирайтной информации
-final class CopyrightService: CopyrightServiceProtocol {
+actor CopyrightService: CopyrightServiceProtocol {
     
     private let client: Client
     private let apikey: String

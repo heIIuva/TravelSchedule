@@ -17,7 +17,7 @@ protocol ThreadStationsServiceProtocol {
 }
 
 //получение списка станций следования нитки
-final class ThreadStationsService: ThreadStationsServiceProtocol{
+actor ThreadStationsService: ThreadStationsServiceProtocol{
     
     private let client: Client
     private let apikey: String
