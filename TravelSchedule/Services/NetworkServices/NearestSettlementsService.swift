@@ -17,7 +17,7 @@ protocol NearestSettlementServiceProtocol {
 }
 
 //получение ближайшего населенного пункта
-final class NearestSettlementService: NearestSettlementServiceProtocol {
+actor NearestSettlementService: NearestSettlementServiceProtocol {
     
     private let client: Client
     private let apikey: String

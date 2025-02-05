@@ -17,7 +17,7 @@ protocol ScheduleBetweenServiceProtocol {
 }
 
 //получение расписания между станциями
-final class ScheduleBetweenService: ScheduleBetweenServiceProtocol {
+actor ScheduleBetweenService: ScheduleBetweenServiceProtocol {
     
     private let client: Client
     private let apikey: String

@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @Binding var isDarkMode: Bool
+    
+    init(isDarkMode: Bool) {
+        self.isDarkMode = isDarkMode
+    }
+    
+    @State private var isDarkMode: Bool
+        
+    @EnvironmentObject var viewModel: SettingsViewModel
     @EnvironmentObject var router: Router
     
     var body: some View {
         VStack {
             Toggle("Темная тема", isOn: $isDarkMode)
                 .toggleStyle(SwitchToggleStyle(tint: Color.blue))
+                .onChange(of: isDarkMode) {
+                    withAnimation(.smooth(duration: 1)) {
+                        viewModel.toggleDarkMode()
+                    }
+                }
             ListRowView(text: "Пользовательское соглашение")
                 .foregroundStyle(.foreground)
                 .onTapGesture {
-                    router.push(.goToUserAgreementView)
+                    router.push(.goToUserAgreementView(viewModel.url))
                 }
         }
         .padding(.top, 24)
@@ -36,5 +48,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView(isDarkMode: .constant(false))
+    SettingsView(isDarkMode: false)
 }

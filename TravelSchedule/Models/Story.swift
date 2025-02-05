@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Story: Identifiable, Hashable {
+struct Story: Identifiable, Hashable, Sendable {
     let id: Int
     let image: ImageResource
     let title: String = Array(repeating: "Text", count: 9).joined(separator: " ")
     let description: String = Array(repeating: "Text", count: 20).joined(separator: " ")
 }
 
-struct StoryPack: Identifiable, Hashable {
+struct StoryPack: Identifiable, Hashable, Sendable {
     let id: Int
     let preview: ImageResource
     let stories: [Story]

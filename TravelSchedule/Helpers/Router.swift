@@ -25,8 +25,8 @@ final class Router: ObservableObject {
             FiltersView()
         case let .goToCarrierInfoView(carrier):
             CarrierInfoView(carrier: carrier)
-        case .goToUserAgreementView:
-            UserAgreementView()
+        case let .goToUserAgreementView(url):
+            UserAgreementView(url: url)
         }
     }
     

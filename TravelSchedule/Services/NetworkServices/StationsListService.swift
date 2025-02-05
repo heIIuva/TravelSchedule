@@ -18,7 +18,7 @@ protocol StationsServiceProtocol {
 }
 
 //получение всех станций
-final class StationsService: StationsServiceProtocol {
+actor StationsService: StationsServiceProtocol {
     
     private let client: Client
     private let apikey: String

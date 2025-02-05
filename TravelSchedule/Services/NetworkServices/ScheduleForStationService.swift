@@ -17,7 +17,7 @@ protocol ScheduleForStationServiceProtocol {
 }
 
 //получение расписания для станции
-final class ScheduleForStationService: ScheduleForStationServiceProtocol {
+actor ScheduleForStationService: ScheduleForStationServiceProtocol {
     
     private let client: Client
     private let apikey: String
